@@ -1,6 +1,7 @@
 import datetime
 now = datetime.datetime.now()
-"""
+print(now.date()) # just get the date part
+print(datetime.date.today()) # this will return today date
 year = now.year
 month = now.month
 day = now.day
@@ -27,6 +28,7 @@ now = datetime.datetime.now()
 formatted_date = now.strftime("%Y-%m-%d %H:%M:%S")
 print(formatted_date)
 
+#The strptime method in the datetime module is used to parse a string representing a date and/or time into a datetime object.
 date_string = "2023-10-05 14:30:00"
 parsed_date = datetime.datetime.strptime(date_string, "%Y-%m-%d %H:%M:%S")
 print(parsed_date)
@@ -45,17 +47,17 @@ print(date1 < date2)   # Check if date1 is earlier than date2
 print(date1 > date2)   # Check if date1 is later than date2
 print(date1 <= date2)  # Check if date1 is earlier than or equal to date2
 print(date1 >= date2)  # Check if date1 is later than or equal to date2
-"""
+
 
 date_string = "2024-10-25"
 
-# Convert the string to a date object
+# Convert the string to a datetime to date object
 parsed_date = datetime.datetime.strptime(date_string, "%Y-%m-%d").date()
 # convert datetime to string
 formatted_date = now.strftime("%Y-%m-%d %H:%M:%S")
 
               
-
+#how to get just part of datetime
 """
 %Y - year 4 digit
 %y - year last 2 digit
@@ -69,7 +71,5 @@ formatted_date = now.strftime("%Y-%m-%d %H:%M:%S")
 %B - Month Name
 %b - Month Name shorter form
 
-
 """
-# %B -month name, %b month short name, %Y four
-print(datetime.date.strftime(now, "%m/%d/%Y"))
+
